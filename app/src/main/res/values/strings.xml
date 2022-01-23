@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MarIvram Choir</string>
+    <string name="image_hymens">All Hymens</string>
+    <string name="Hymens">All Hymens</string>
+    <string name="describeHymens">ترانيم العروض </string>
+    <string name="allAlbumes">MarIvram Albumes</string>
+    <string name="marIvram_albumes">جميع الالبومات</string>
+    <string name="create">Create Servant</string>
+    <string name="create_details">"تجميع الترانيم لعرض معين "</string>
+    <string name="about">About Team</string>
+    <string name="about_desc">كورال مارافرام السريانى</string>
+</resources>
