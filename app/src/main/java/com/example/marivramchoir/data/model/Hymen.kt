@@ -2,11 +2,13 @@ package com.example.marivramchoir.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "hymen_table")
 data class Hymen(
 
+    @PrimaryKey
     @SerializedName("tranimId")
     @ColumnInfo(name = "tranimId")
     val id : Int? = null,
@@ -21,6 +23,11 @@ data class Hymen(
 
     @SerializedName("tranimUrl")
     @ColumnInfo(name = "tranimUrl")
-    val hymenUrl : String? = null
+    val hymenUrl : String? = null,
+
+
+    @SerializedName("tarnimaType")
+    @ColumnInfo(name = "tarnimaType")
+    val hymenType : String? = null
 
 )

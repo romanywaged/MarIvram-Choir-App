@@ -14,20 +14,20 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AllHymensViewModel
-@Inject constructor(private val allHymensRepository: AllHymensRepository): ViewModel() {
+@Inject constructor(private val allHymensRepository: AllHymensRepository) : ViewModel() {
 
-    private val responseStateFlow : MutableStateFlow<ApiState>
-    = MutableStateFlow(ApiState.Empty)
-    val stateFlowResponse:StateFlow<ApiState> = responseStateFlow
+    private val dataStateFlow : MutableStateFlow<ApiState>
+            = MutableStateFlow(ApiState.Empty)
+    val stateFlowData: StateFlow<ApiState> = dataStateFlow
 
     fun getAllHymens() = viewModelScope.launch {
-        responseStateFlow.value = ApiState.Loading
-        allHymensRepository.getAllHymens()
+        dataStateFlow.value = ApiState.Loading
+        allHymensRepository.getAllHymensDb()
             .catch { e ->
-                responseStateFlow.value = ApiState.Failure(e)
+                dataStateFlow.value = ApiState.Failure(e)
             }
             .collect { hymens ->
-                responseStateFlow.value = ApiState.GetAllHymensSuccess(hymens)
+                dataStateFlow.value = ApiState.GetAllHymensSuccess(hymens)
             }
     }
 
