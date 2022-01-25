@@ -6,7 +6,7 @@ import com.example.marivramchoir.data.api.MarIvramApi
 import com.example.marivramchoir.data.database.AppDatabase
 import com.example.marivramchoir.data.database.DatabaseDao
 import com.example.marivramchoir.data.database.DatabaseHelper
-import com.example.marivramchoir.data.repository.DashboardRepository
+import com.example.marivramchoir.data.repository.AllHymensRepository
 import com.example.marivramchoir.utlis.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -57,5 +57,5 @@ object AppModule {
     @Provides
     fun provideGetAllHymensRepository(
         apiServiceImpl: HymenApiImpl, databaseHelper: DatabaseHelper
-    ) = DashboardRepository(apiServiceImpl, databaseHelper)
+    ) = AllHymensRepository(apiServiceImpl, databaseHelper)
 }

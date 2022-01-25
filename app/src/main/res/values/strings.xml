@@ -9,4 +9,6 @@
     <string name="create_details">"تجميع الترانيم لعرض معين "</string>
     <string name="about">About Team</string>
     <string name="about_desc">كورال مارافرام السريانى</string>
+    <string name="add_desc">اضف ترنيمه</string>
+    <string name="add_tarnima">Add Tarnima</string>
 </resources>

@@ -219,7 +219,7 @@
                     app:cardCornerRadius="40dp">
 
                     <LinearLayout
-                        android:id="@+id/aboutCardView"
+                        android:id="@+id/addTranim_card"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
                         android:layout_width="match_parent"
@@ -241,7 +241,7 @@
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:text="@string/about"/>
+                            android:text="@string/add_tarnima"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -251,10 +251,68 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/about_desc"
+                            android:text="@string/add_desc"
                             android:padding="12dp"
                             android:textColor="@android:color/darker_gray"/>
 
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="13dp"
+                    app:cardCornerRadius="40dp">
+
+                    <LinearLayout
+                        android:id="@+id/aboutCardView"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
+
+                        <ImageView
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:src="@drawable/booking"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:text="@string/about"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            android:layout_margin="10dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/about_desc"
+                            android:padding="12dp"
+                            android:textColor="@android:color/darker_gray"/>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>

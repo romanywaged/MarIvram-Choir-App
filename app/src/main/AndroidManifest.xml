@@ -16,10 +16,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarIvramChoir"
         android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup"
         tools:targetApi="m">
         <activity
-            android:name=".ui.view.AllHymensActivity"
+            android:name=".ui.view.AddTarnimaActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.view.ShowTarnimaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.HymenWordActivity"
+            android:exported="false"
+            android:theme="@style/AllHymensTheme" />
+        <activity
+            android:name=".ui.view.AllHymensActivity"
+            android:exported="false"
+            android:theme="@style/AllHymensTheme" />
         <activity
             android:name=".ui.view.DashboardActivity"
             android:exported="true">

@@ -11,23 +11,23 @@ data class Hymen(
     @PrimaryKey
     @SerializedName("tranimId")
     @ColumnInfo(name = "tranimId")
-    val id : Int? = null,
+    var id : Int? = null,
 
     @SerializedName("tranimName")
     @ColumnInfo(name = "tranimName")
-    val hymenName : String? = null,
+    var hymenName : String? = null,
 
     @SerializedName("tranimWords")
     @ColumnInfo(name = "tranimWords")
-    val hymenWords : String? = null,
+    var hymenWords : String? = null,
 
     @SerializedName("tranimUrl")
     @ColumnInfo(name = "tranimUrl")
-    val hymenUrl : String? = null,
+    var hymenUrl : String? = null,
 
 
     @SerializedName("tarnimaType")
     @ColumnInfo(name = "tarnimaType")
-    val hymenType : String? = null
+    var hymenType : String? = null
 
 )
