@@ -3,9 +3,9 @@ package com.example.marivramchoir.ui.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.core.app.NavUtils
 import com.example.marivramchoir.R
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_hymen_word.*
 
 @AndroidEntryPoint
 class HymenWordActivity : AppCompatActivity() {
@@ -29,6 +29,8 @@ class HymenWordActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
         supportActionBar!!.title = hymenName
+
+        words.text = hymenWord
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

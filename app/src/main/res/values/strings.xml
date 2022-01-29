@@ -11,4 +11,9 @@
     <string name="about_desc">كورال مارافرام السريانى</string>
     <string name="add_desc">اضف ترنيمه</string>
     <string name="add_tarnima">Add Tarnima</string>
+    <string name="add_tarnima_arabic">اضافة تفاصيل الترنيمه</string>
+    <string name="hymen_name">اسم الترنيمه</string>
+    <string name="app_name_arabic">كورال مارافرام السريانى</string>
+    <string name="hymen_url">URL....</string>
+    <string name="hymen_type_txt">اختر نوع الترنيمه</string>
 </resources>

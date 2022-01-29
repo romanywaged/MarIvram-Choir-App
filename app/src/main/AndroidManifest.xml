@@ -20,9 +20,7 @@
         tools:targetApi="m">
         <activity
             android:name=".ui.view.AddTarnimaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.view.ShowTarnimaActivity"
+            android:theme="@style/AddTarnimaActivity"
             android:exported="false" />
         <activity
             android:name=".ui.view.HymenWordActivity"

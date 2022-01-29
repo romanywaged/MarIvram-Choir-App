@@ -7,4 +7,6 @@ import javax.inject.Inject
 class HymenApiImpl @Inject constructor(private val marIvramApi: MarIvramApi) {
 
     suspend fun getAllHymens() : List<Hymen> = marIvramApi.getAllHymens()
+
+    suspend fun addTarnima(hymen: Hymen) = marIvramApi.addTarnima(hymen)
 }
