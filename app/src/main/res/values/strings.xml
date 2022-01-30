@@ -14,6 +14,29 @@
     <string name="add_tarnima_arabic">اضافة تفاصيل الترنيمه</string>
     <string name="hymen_name">اسم الترنيمه</string>
     <string name="app_name_arabic">كورال مارافرام السريانى</string>
-    <string name="hymen_url">URL....</string>
+    <string name="hymen_url">اللينك ....</string>
     <string name="hymen_type_txt">اختر نوع الترنيمه</string>
+    <string name="hymen_words">كلمات الترنيمه</string>
+    <string name="user_name">User Name</string>
+    <string name="login_desc">login to add tranim</string>
+    <string name="login">login</string>
+    <string name="all_albums">Albums</string>
+    <string name="first_album">ساكن فى علاه</string>
+    <string name="show">Move to Album</string>
+    <string name="fifth_album">سمو الملك</string>
+    <string name="fourth_album">كنيسة زمان</string>
+    <string name="third_album">انا متطمن</string>
+    <string name="second_album">هيستجيب</string>
+    <string name="empty_list">لا توجد بيانات</string>
+
+    <string-array name="Albumes">
+        <item>سمو الملك</item>
+        <item>كنيسة زمان</item>
+        <item>انا متطمن</item>
+        <item>هيستجيب</item>
+        <item>ساكن فى علاه</item>
+        <item>ترانيم عروض</item>
+    </string-array>
+
+
 </resources>

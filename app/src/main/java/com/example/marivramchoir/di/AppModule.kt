@@ -6,6 +6,8 @@ import com.example.marivramchoir.data.api.MarIvramApi
 import com.example.marivramchoir.data.database.AppDatabase
 import com.example.marivramchoir.data.database.DatabaseDao
 import com.example.marivramchoir.data.database.DatabaseHelper
+import com.example.marivramchoir.data.repository.AddTarnimaRepository
+import com.example.marivramchoir.data.repository.AllHymensByAlbumRepository
 import com.example.marivramchoir.data.repository.AllHymensRepository
 import com.example.marivramchoir.utlis.BASE_URL
 import dagger.Module
@@ -58,4 +60,17 @@ object AppModule {
     fun provideGetAllHymensRepository(
         apiServiceImpl: HymenApiImpl, databaseHelper: DatabaseHelper
     ) = AllHymensRepository(apiServiceImpl, databaseHelper)
+
+
+    @Singleton
+    @Provides
+    fun provideAddTarnimaRepository(
+        apiServiceImpl: HymenApiImpl
+    ) = AddTarnimaRepository(apiServiceImpl)
+
+    @Singleton
+    @Provides
+    fun provideGetAllHymensByAlbumRepository(
+        databaseHelper: DatabaseHelper
+    ) = AllHymensByAlbumRepository(databaseHelper)
 }

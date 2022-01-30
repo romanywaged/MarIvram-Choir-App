@@ -19,9 +19,17 @@
         tools:ignore="AllowBackup"
         tools:targetApi="m">
         <activity
-            android:name=".ui.view.AddTarnimaActivity"
-            android:theme="@style/AddTarnimaActivity"
+            android:name=".ui.view.AllHymensInAlbumActivity"
+            android:theme="@style/AllHymensTheme"
             android:exported="false" />
+        <activity
+            android:name=".ui.view.AlbumsActivity"
+            android:exported="false"
+            android:theme="@style/AlbumActivity" />
+        <activity
+            android:name=".ui.view.AddTarnimaActivity"
+            android:exported="false"
+            android:theme="@style/AddTarnimaActivity" />
         <activity
             android:name=".ui.view.HymenWordActivity"
             android:exported="false"

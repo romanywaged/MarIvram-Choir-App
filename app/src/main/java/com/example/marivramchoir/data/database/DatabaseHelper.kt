@@ -11,4 +11,6 @@ class DatabaseHelper @Inject constructor(private val databaseDao: DatabaseDao) {
 
     suspend fun getAllHymens() :List<Hymen> = databaseDao.getAllHymensDb()
 
+    suspend fun getHymensByAlbum(type:String): List<Hymen> = databaseDao.getHymensByAlbum(type)
+
 }

@@ -10,4 +10,6 @@ sealed class ApiState {
     object Empty : ApiState()
 
     class GetAllHymensSuccess(val hymens:List<Hymen>) : ApiState()
+
+    object AddTarnimaSuccess : ApiState()
 }

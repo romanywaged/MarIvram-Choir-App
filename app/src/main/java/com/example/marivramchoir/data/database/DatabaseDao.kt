@@ -21,4 +21,8 @@ interface DatabaseDao {
     @Query("SELECT * FROM hymen_table")
     suspend fun getAllHymensDb() : List<Hymen>
 
+    //------------------------------ Dashboard Activity-----------------------------
+    @Query("SELECT * FROM hymen_table where tarnimaType = :type")
+    suspend fun getHymensByAlbum(type:String) : List<Hymen>
+
 }
