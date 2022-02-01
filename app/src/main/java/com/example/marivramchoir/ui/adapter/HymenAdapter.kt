@@ -27,6 +27,7 @@ class HymenAdapter constructor(private val context: Context,
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         fade = AnimationUtils.loadAnimation(context, R.anim.scale_anim)
         holder.card.animation = fade
+        holder.checkHymen.visibility = View.GONE
         holder.hymenName.text = hymens[position].hymenName
         holder.itemView.setOnClickListener {
             onHymenClickListener.onHymenClicked(hymens[position])
@@ -40,6 +41,7 @@ class HymenAdapter constructor(private val context: Context,
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var hymenName = itemView.hymen_name!!
-        var card =itemView.cardview!!
+        var card = itemView.cardview!!
+        var checkHymen = itemView.hymen_check!!
     }
 }

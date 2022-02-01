@@ -19,9 +19,16 @@
         tools:ignore="AllowBackup"
         tools:targetApi="m">
         <activity
-            android:name=".ui.view.AllHymensInAlbumActivity"
-            android:theme="@style/AllHymensTheme"
+            android:name=".ui.view.AllServantActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.view.CreateServantActivity"
+            android:exported="false"
+            android:theme="@style/CreateServantTheme" />
+        <activity
+            android:name=".ui.view.AllHymensInAlbumActivity"
+            android:exported="false"
+            android:theme="@style/AllHymensTheme" />
         <activity
             android:name=".ui.view.AlbumsActivity"
             android:exported="false"

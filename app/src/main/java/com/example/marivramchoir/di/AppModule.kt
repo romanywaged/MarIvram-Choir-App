@@ -6,6 +6,7 @@ import com.example.marivramchoir.data.api.MarIvramApi
 import com.example.marivramchoir.data.database.AppDatabase
 import com.example.marivramchoir.data.database.DatabaseDao
 import com.example.marivramchoir.data.database.DatabaseHelper
+import com.example.marivramchoir.data.repository.AddServantRepository
 import com.example.marivramchoir.data.repository.AddTarnimaRepository
 import com.example.marivramchoir.data.repository.AllHymensByAlbumRepository
 import com.example.marivramchoir.data.repository.AllHymensRepository
@@ -67,6 +68,12 @@ object AppModule {
     fun provideAddTarnimaRepository(
         apiServiceImpl: HymenApiImpl
     ) = AddTarnimaRepository(apiServiceImpl)
+
+    @Singleton
+    @Provides
+    fun provideAddServantRepository(
+        apiServiceImpl: HymenApiImpl
+    ) = AddServantRepository(apiServiceImpl)
 
     @Singleton
     @Provides

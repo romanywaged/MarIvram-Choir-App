@@ -32,6 +32,10 @@ class DashboardActivity : AppCompatActivity() {
             navigateActivity(AlbumsActivity::class.java, " ")
         }
 
+        create_servant_card.setOnClickListener {
+            navigateActivity(CreateServantActivity::class.java, "Create Servant")
+        }
+
     }
 
 

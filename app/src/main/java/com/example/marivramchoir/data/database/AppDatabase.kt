@@ -10,7 +10,7 @@ import com.example.marivramchoir.data.model.ServantTranimRef
 import com.example.marivramchoir.utlis.DATABASE_NAME
 
 
-@Database(entities = [Hymen::class, Servant::class, ServantTranimRef::class], version = 2, exportSchema = false)
+@Database(entities = [Hymen::class, Servant::class, ServantTranimRef::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun getDao() : DatabaseDao
 

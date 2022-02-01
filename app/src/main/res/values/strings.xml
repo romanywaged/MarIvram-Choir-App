@@ -28,6 +28,13 @@
     <string name="third_album">انا متطمن</string>
     <string name="second_album">هيستجيب</string>
     <string name="empty_list">لا توجد بيانات</string>
+    <string name="create_servant_arabic">تميع الترانيم لخدمه معينه</string>
+    <string name="servant_name">اسم الخدمه</string>
+    <string name="servant_date">تاريخ الخدمه</string>
+    <string name="servant_location">مكان الخدمه</string>
+    <string name="add_servant">Create Servant</string>
+    <string name="time">03:05 Pm</string>
+    <string name="location">كنيستنا</string>
 
     <string-array name="Albumes">
         <item>سمو الملك</item>

@@ -5,22 +5,26 @@ import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 
 
 @Entity(tableName = "servant_table")
 data class Servant(
 
-
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
+    @SerializedName("servantId")
     @ColumnInfo(name = "servant_Id")
-    var servantId: Int,
+    var servantId: Int? = null,
 
+    @SerializedName("servantName")
     @ColumnInfo(name = "servant_name")
-    val servantName: String? = null,
+    var servantName: String? = null,
 
+    @SerializedName("servantLocation")
     @ColumnInfo(name = "servant_location")
-    val servantLocation: String? = null,
+    var servantLocation: String? = null,
 
+    @SerializedName("servantDate")
     @ColumnInfo(name = "servant_date")
-    val servantDate:String? = null
+    var servantDate:String? = null
 )

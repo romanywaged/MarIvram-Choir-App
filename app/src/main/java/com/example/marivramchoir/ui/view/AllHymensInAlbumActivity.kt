@@ -59,16 +59,19 @@ class AllHymensInAlbumActivity : AppCompatActivity() , OnHymenClickListener{
                     {
                         setUpRecycle(it.hymens)
                     }
+
                     is ApiState.Empty ->
                     {
                         no_data_txt.visibility = View.VISIBLE
                         all_hymens_in_album.visibility = View.INVISIBLE
                     }
+
                     is ApiState.Failure ->
                     {
                         no_data_txt.visibility = View.VISIBLE
                         all_hymens_in_album.visibility = View.INVISIBLE
                     }
+
                     else ->
                     {
 
