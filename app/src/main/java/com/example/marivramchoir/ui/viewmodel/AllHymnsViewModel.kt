@@ -2,7 +2,7 @@ package com.example.marivramchoir.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.marivramchoir.data.model.Hymen
+import com.example.marivramchoir.data.model.Hymn
 import com.example.marivramchoir.data.repository.AllHymensRepository
 import com.example.marivramchoir.utlis.ApiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class AllHymensViewModel
+class AllHymnsViewModel
 @Inject constructor(private val allHymensRepository: AllHymensRepository) : ViewModel() {
 
     private val dataStateFlow : MutableStateFlow<ApiState>
@@ -47,8 +47,8 @@ class AllHymensViewModel
             }
     }
 
-    fun insertAllHymens(hymens:List<Hymen>) = viewModelScope.launch(Dispatchers.IO) {
-        allHymensRepository.insertHymensDb(hymens)
+    fun insertAllHymens(hymns:List<Hymn>) = viewModelScope.launch(Dispatchers.IO) {
+        allHymensRepository.insertHymensDb(hymns)
     }
 
     fun deleteAllHymens() = viewModelScope.launch(Dispatchers.IO) {

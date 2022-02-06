@@ -4,13 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.marivramchoir.data.model.Hymen
+import com.example.marivramchoir.data.model.Hymn
 import com.example.marivramchoir.data.model.Servant
 import com.example.marivramchoir.data.model.ServantTranimRef
 import com.example.marivramchoir.utlis.DATABASE_NAME
 
 
-@Database(entities = [Hymen::class, Servant::class, ServantTranimRef::class], version = 3, exportSchema = false)
+@Database(entities = [Hymn::class, Servant::class, ServantTranimRef::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun getDao() : DatabaseDao
 

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">MarIvram Choir</string>
-    <string name="image_hymens">All Hymens</string>
-    <string name="Hymens">All Hymens</string>
-    <string name="describeHymens">ترانيم العروض </string>
+    <string name="image_hymns">All Hymns</string>
+    <string name="Hymns">All Hymns</string>
+    <string name="describeHymns">ترانيم العروض </string>
     <string name="allAlbumes">MarIvram Albumes</string>
     <string name="marIvram_albumes">جميع الالبومات</string>
     <string name="create">Create Servant</string>
@@ -28,13 +28,19 @@
     <string name="third_album">انا متطمن</string>
     <string name="second_album">هيستجيب</string>
     <string name="empty_list">لا توجد بيانات</string>
-    <string name="create_servant_arabic">تميع الترانيم لخدمه معينه</string>
+    <string name="create_servant_arabic">تجميع الترانيم لخدمه معينه</string>
     <string name="servant_name">اسم الخدمه</string>
     <string name="servant_date">تاريخ الخدمه</string>
     <string name="servant_location">مكان الخدمه</string>
     <string name="add_servant">Create Servant</string>
     <string name="time">03:05 Pm</string>
     <string name="location">كنيستنا</string>
+    <string name="praise_family">Praise Family</string>
+    <string name="read_add">Tranim</string>
+    <string name="praise_family_desc">برنامج كورال مارافرام السريانى - اسرة التسبيح - كنيسة لسيده العذراء مريم بالقصيرين برنامج مخصص لجميع ترانيم الكورال واسرة تسبيح من بدايتها </string>
+    <string name="marivram_desc">كورال مارافرام السريانى هو كورال يتكون من جميع مراحل الكورالات ابتدائى - اعدادى - ثانوى - جامعه - خريجين و البرنامج هيساعدك تشوف وتعرف جميع ترانيم الكورال </string>
+    <string name="read_add_desc">البرنامج بيسمحلك تشوف وتقرا الترانيم وتسمعها و تضيف ترانيم و تضيف خدمه معينه بأضافة الترانيم المختاره للخدمه </string>
+    <string name="next">Next</string>
 
     <string-array name="Albumes">
         <item>سمو الملك</item>

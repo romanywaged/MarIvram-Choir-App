@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.view.MenuItem
 import com.example.marivramchoir.R
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_hymen_word.*
+import kotlinx.android.synthetic.main.activity_hymn_word.*
 
 @AndroidEntryPoint
-class HymenWordActivity : AppCompatActivity() {
+class HymnWordActivity : AppCompatActivity() {
 
     private var hymenWord:String = ""
     private var hymenName:String = ""
@@ -17,7 +17,7 @@ class HymenWordActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hymen_word)
+        setContentView(R.layout.activity_hymn_word)
 
         if(intent != null)
         {

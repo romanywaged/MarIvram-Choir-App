@@ -1,6 +1,6 @@
 package com.example.marivramchoir.utlis
 
-import com.example.marivramchoir.data.model.Hymen
+import com.example.marivramchoir.data.model.Hymn
 
 sealed class ApiState {
     object Loading : ApiState()
@@ -9,7 +9,7 @@ sealed class ApiState {
 
     object Empty : ApiState()
 
-    class GetAllHymensSuccess(val hymens:List<Hymen>) : ApiState()
+    class GetAllHymensSuccess(val hymns:List<Hymn>) : ApiState()
 
     object AddTarnimaSuccess : ApiState()
 

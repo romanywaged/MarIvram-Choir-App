@@ -2,7 +2,7 @@ package com.example.marivramchoir.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.marivramchoir.data.model.Hymen
+import com.example.marivramchoir.data.model.Hymn
 import com.example.marivramchoir.data.repository.AddTarnimaRepository
 import com.example.marivramchoir.utlis.ApiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -21,9 +21,9 @@ class AddTarnimaViewModel
             = MutableStateFlow(ApiState.Empty)
     val stateFlowResponse: StateFlow<ApiState> = responseStateFlow
 
-    fun addHymen(hymen: Hymen) = viewModelScope.launch {
+    fun addHymen(hymn: Hymn) = viewModelScope.launch {
         responseStateFlow.value = ApiState.Loading
-        addTarnimaRepository.addTarnima(hymen)
+        addTarnimaRepository.addTarnima(hymn)
             .catch { e ->
                 responseStateFlow.value = ApiState.Failure(e)
             }

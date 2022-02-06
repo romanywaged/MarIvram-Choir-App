@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.marivramchoir.R
-import com.example.marivramchoir.data.model.Hymen
+import com.example.marivramchoir.data.model.Hymn
 import com.example.marivramchoir.ui.viewmodel.AddTarnimaViewModel
 import com.example.marivramchoir.utlis.ApiState
 import com.example.marivramchoir.utlis.CommonMethod
@@ -69,7 +69,7 @@ class AddTarnimaActivity : AppCompatActivity() {
             }
             else
             {
-                val hymen = Hymen()
+                val hymen = Hymn()
                 hymen.hymenName = hymenName.toString()
                 hymen.hymenType = hymenType.toString()
                 hymen.hymenUrl = hymenUrl.toString()
@@ -80,8 +80,8 @@ class AddTarnimaActivity : AppCompatActivity() {
         }
     }
 
-    private fun uploadTarnima(hymen: Hymen) {
-        addTarnimaViewModel.addHymen(hymen)
+    private fun uploadTarnima(hymn: Hymn) {
+        addTarnimaViewModel.addHymen(hymn)
         lifecycleScope.launchWhenStarted {
             addTarnimaViewModel.stateFlowResponse.collect {
                 when(it)

@@ -9,27 +9,27 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.marivramchoir.R
-import com.example.marivramchoir.data.model.Hymen
-import com.example.marivramchoir.ui.adapter.HymenAdapter
-import com.example.marivramchoir.ui.listener.OnHymenClickListener
-import com.example.marivramchoir.ui.viewmodel.AllHymensByAlbumViewModel
+import com.example.marivramchoir.data.model.Hymn
+import com.example.marivramchoir.ui.adapter.HymnAdapter
+import com.example.marivramchoir.ui.listener.OnHymnClickListener
+import com.example.marivramchoir.ui.viewmodel.AllHymnsByAlbumViewModel
 import com.example.marivramchoir.utlis.ApiState
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_all_hymens_in_album.*
+import kotlinx.android.synthetic.main.activity_all_hymns_in_album.*
 import kotlinx.coroutines.flow.collect
 
 
 @AndroidEntryPoint
-class AllHymensInAlbumActivity : AppCompatActivity() , OnHymenClickListener{
+class AllHymnsInAlbumActivity : AppCompatActivity() , OnHymnClickListener{
 
-    private val allHymensByAlbumViewModel: AllHymensByAlbumViewModel by viewModels()
+    private val allHymnsByAlbumViewModel: AllHymnsByAlbumViewModel by viewModels()
     private lateinit var type:String
 
-    private lateinit var adapter: HymenAdapter
+    private lateinit var adapter: HymnAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_all_hymens_in_album)
+        setContentView(R.layout.activity_all_hymns_in_album)
 
         if (intent != null)
         {
@@ -45,9 +45,9 @@ class AllHymensInAlbumActivity : AppCompatActivity() , OnHymenClickListener{
     }
 
     private fun getHymensData(type:String) {
-        allHymensByAlbumViewModel.getAllHymensByAlbum(type)
+        allHymnsByAlbumViewModel.getAllHymensByAlbum(type)
         lifecycleScope.launchWhenStarted {
-            allHymensByAlbumViewModel.stateFlowData.collect {
+            allHymnsByAlbumViewModel.stateFlowData.collect {
                 when (it)
                 {
                     is ApiState.Loading ->
@@ -57,7 +57,7 @@ class AllHymensInAlbumActivity : AppCompatActivity() , OnHymenClickListener{
 
                     is ApiState.GetAllHymensSuccess ->
                     {
-                        setUpRecycle(it.hymens)
+                        setUpRecycle(it.hymns)
                     }
 
                     is ApiState.Empty ->
@@ -81,18 +81,18 @@ class AllHymensInAlbumActivity : AppCompatActivity() , OnHymenClickListener{
         }
     }
 
-    private fun setUpRecycle(hymens: List<Hymen>) {
-        adapter = HymenAdapter(this, hymens, this)
+    private fun setUpRecycle(hymns: List<Hymn>) {
+        adapter = HymnAdapter(this, hymns, this)
         all_hymens_in_album.layoutManager = LinearLayoutManager(this)
         all_hymens_in_album.setHasFixedSize(true)
         all_hymens_in_album.adapter = adapter
     }
 
-    override fun onHymenClicked(hymen: Hymen) {
-        val intent = Intent(this,HymenWordActivity::class.java)
-        intent.putExtra("words", hymen.hymenWords)
-        intent.putExtra("url", hymen.hymenUrl)
-        intent.putExtra("name", hymen.hymenName)
+    override fun onHymenClicked(hymn: Hymn) {
+        val intent = Intent(this,HymnWordActivity::class.java)
+        intent.putExtra("words", hymn.hymenWords)
+        intent.putExtra("url", hymn.hymenUrl)
+        intent.putExtra("name", hymn.hymenName)
         startActivity(intent)
     }
 

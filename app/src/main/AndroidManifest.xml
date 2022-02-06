@@ -19,6 +19,24 @@
         tools:ignore="AllowBackup"
         tools:targetApi="m">
         <activity
+            android:name=".ui.view.SplashActivity"
+            android:exported="true"
+            android:theme="@style/App_Tot_Theme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.view.AppTutorialActivity"
+            android:exported="false"
+            android:theme="@style/App_Tot_Theme"/>
+        <activity
+            android:name=".ui.view.AddHymnsInServantActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.AllServantActivity"
             android:exported="false" />
         <activity
@@ -26,7 +44,7 @@
             android:exported="false"
             android:theme="@style/CreateServantTheme" />
         <activity
-            android:name=".ui.view.AllHymensInAlbumActivity"
+            android:name=".ui.view.AllHymnsInAlbumActivity"
             android:exported="false"
             android:theme="@style/AllHymensTheme" />
         <activity
@@ -38,22 +56,16 @@
             android:exported="false"
             android:theme="@style/AddTarnimaActivity" />
         <activity
-            android:name=".ui.view.HymenWordActivity"
+            android:name=".ui.view.HymnWordActivity"
             android:exported="false"
             android:theme="@style/AllHymensTheme" />
         <activity
-            android:name=".ui.view.AllHymensActivity"
+            android:name=".ui.view.AllHymnsActivity"
             android:exported="false"
             android:theme="@style/AllHymensTheme" />
         <activity
             android:name=".ui.view.DashboardActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

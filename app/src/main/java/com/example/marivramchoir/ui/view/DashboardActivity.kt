@@ -21,7 +21,7 @@ class DashboardActivity : AppCompatActivity() {
         commonMethod = CommonMethod(this)
 
         taranem_card_view.setOnClickListener {
-            navigateActivity(AllHymensActivity::class.java, "Tranim")
+            navigateActivity(AllHymnsActivity::class.java, "Tranim")
         }
 
         add_tranim_card.setOnClickListener {

@@ -15,5 +15,5 @@ data class ServantTranimRelation(
         associateBy = Junction(ServantTranimRef::class)
     )
 
-    val tranim: List<Hymen>
+    val tranim: List<Hymn>
 )

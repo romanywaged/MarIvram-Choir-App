@@ -2,7 +2,6 @@ package com.example.marivramchoir.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.marivramchoir.data.model.Hymen
 import com.example.marivramchoir.data.model.Servant
 import com.example.marivramchoir.data.repository.AddServantRepository
 import com.example.marivramchoir.utlis.ApiState

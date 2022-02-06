@@ -1,5 +1,6 @@
 package com.example.marivramchoir.ui.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -47,7 +48,10 @@ class CreateServantActivity : AppCompatActivity() {
         supportActionBar!!.title = pageTitle
 
         btn_create_servant.setOnClickListener {
-            createServant()
+           // createServant()
+
+            val intent = Intent(this, AddHymnsInServantActivity::class.java)
+            startActivity(intent)
         }
 
     }

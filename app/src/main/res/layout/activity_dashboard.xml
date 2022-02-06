@@ -81,7 +81,7 @@
                             android:layout_width="65dp"
                             android:layout_height="65dp"
                             android:src="@drawable/icon"
-                            android:contentDescription="@string/image_hymens" />
+                            android:contentDescription="@string/image_hymns" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                             android:layout_marginTop="10dp"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:text="@string/Hymens"/>
+                            android:text="@string/Hymns"/>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
@@ -99,7 +99,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/describeHymens"
+                            android:text="@string/describeHymns"
                             android:padding="12dp"
                             android:textColor="@android:color/darker_gray"/>
                     </LinearLayout>

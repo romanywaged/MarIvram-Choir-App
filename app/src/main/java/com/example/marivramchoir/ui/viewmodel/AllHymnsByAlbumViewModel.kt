@@ -14,7 +14,7 @@ import javax.inject.Inject
 import kotlin.math.hypot
 
 @HiltViewModel
-class AllHymensByAlbumViewModel
+class AllHymnsByAlbumViewModel
 @Inject constructor(private val allHymensByAlbumRepository: AllHymensByAlbumRepository) :ViewModel(){
 
     private val dataStateFlow : MutableStateFlow<ApiState>

@@ -12,34 +12,34 @@ import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.marivramchoir.R
-import com.example.marivramchoir.data.model.Hymen
-import com.example.marivramchoir.ui.adapter.HymenAdapter
-import com.example.marivramchoir.ui.listener.OnHymenClickListener
-import com.example.marivramchoir.ui.viewmodel.AllHymensViewModel
+import com.example.marivramchoir.data.model.Hymn
+import com.example.marivramchoir.ui.adapter.HymnAdapter
+import com.example.marivramchoir.ui.listener.OnHymnClickListener
+import com.example.marivramchoir.ui.viewmodel.AllHymnsViewModel
 import com.example.marivramchoir.utlis.ApiState
 import com.example.marivramchoir.utlis.CommonMethod
 import dagger.hilt.android.AndroidEntryPoint
 import dmax.dialog.SpotsDialog
-import kotlinx.android.synthetic.main.activity_all_hymens.*
+import kotlinx.android.synthetic.main.activity_all_hymns.*
 import kotlinx.coroutines.flow.collect
 import java.util.*
 import kotlin.collections.ArrayList
 
 
 @AndroidEntryPoint
-class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, OnHymenClickListener{
+class AllHymnsActivity : AppCompatActivity() , SearchView.OnQueryTextListener, OnHymnClickListener{
 
-    private val allHymensViewModel: AllHymensViewModel by viewModels()
+    private val allHymnsViewModel: AllHymnsViewModel by viewModels()
     private lateinit var waitingDialog: AlertDialog
     private lateinit var commonMethod: CommonMethod
-    private lateinit var adapter: HymenAdapter
-    private var tempHymens = ArrayList<Hymen>()
-    private var hymens = ArrayList<Hymen>()
+    private lateinit var adapter: HymnAdapter
+    private var tempHymens = ArrayList<Hymn>()
+    private var hymens = ArrayList<Hymn>()
     private var pageTitle:String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_all_hymens)
+        setContentView(R.layout.activity_all_hymns)
 
         commonMethod = CommonMethod(this)
 
@@ -65,16 +65,16 @@ class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, 
 
     private fun loadFromDb()
     {
-        allHymensViewModel.getAllHymensFromDb()
+        allHymnsViewModel.getAllHymensFromDb()
         lifecycleScope.launchWhenStarted {
-            allHymensViewModel.stateFlowData.collect {
+            allHymnsViewModel.stateFlowData.collect {
                 when (it) {
                     is ApiState.Loading -> {
                         waitingDialog.show()
                     }
                     is ApiState.GetAllHymensSuccess -> {
-                        hymens.addAll(it.hymens)
-                        tempHymens.addAll(it.hymens)
+                        hymens.addAll(it.hymns)
+                        tempHymens.addAll(it.hymns)
                         commonMethod.showToastMessage("Success")
                         setupRecycle()
                         waitingDialog.dismiss()
@@ -93,9 +93,9 @@ class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, 
     }
 
     private fun getDataAndInsertIntoDatabase() {
-        allHymensViewModel.getAllHymens()
+        allHymnsViewModel.getAllHymens()
         lifecycleScope.launchWhenStarted {
-            allHymensViewModel.stateFlowResponse.collect {
+            allHymnsViewModel.stateFlowResponse.collect {
                 when(it)
                 {
                     is ApiState.Loading -> {
@@ -103,10 +103,10 @@ class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, 
                     }
                     is ApiState.GetAllHymensSuccess ->
                     {
-                        allHymensViewModel.deleteAllHymens()
-                        allHymensViewModel.insertAllHymens(it.hymens)
-                        hymens.addAll(it.hymens)
-                        tempHymens.addAll(it.hymens)
+                        allHymnsViewModel.deleteAllHymens()
+                        allHymnsViewModel.insertAllHymens(it.hymns)
+                        hymens.addAll(it.hymns)
+                        tempHymens.addAll(it.hymns)
                         commonMethod.showToastMessage("Success")
                         setupRecycle()
                         waitingDialog.dismiss()
@@ -127,7 +127,7 @@ class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, 
     }
 
     private fun setupRecycle() {
-        adapter = HymenAdapter(this, tempHymens, this)
+        adapter = HymnAdapter(this, tempHymens, this)
         Rv_hymens.layoutManager = LinearLayoutManager(this)
         Rv_hymens.setHasFixedSize(true)
         Rv_hymens.adapter = adapter
@@ -182,11 +182,11 @@ class AllHymensActivity : AppCompatActivity() , SearchView.OnQueryTextListener, 
         return false
     }
 
-    override fun onHymenClicked(hymen: Hymen) {
-        val intent = Intent(this,HymenWordActivity::class.java)
-        intent.putExtra("words", hymen.hymenWords)
-        intent.putExtra("url", hymen.hymenUrl)
-        intent.putExtra("name", hymen.hymenName)
+    override fun onHymenClicked(hymn: Hymn) {
+        val intent = Intent(this,HymnWordActivity::class.java)
+        intent.putExtra("words", hymn.hymenWords)
+        intent.putExtra("url", hymn.hymenUrl)
+        intent.putExtra("name", hymn.hymenName)
         startActivity(intent)
     }
 

@@ -1,7 +1,7 @@
 package com.example.marivramchoir.di
 
 import android.content.Context
-import com.example.marivramchoir.data.api.HymenApiImpl
+import com.example.marivramchoir.data.api.HymnApiImpl
 import com.example.marivramchoir.data.api.MarIvramApi
 import com.example.marivramchoir.data.database.AppDatabase
 import com.example.marivramchoir.data.database.DatabaseDao
@@ -53,26 +53,26 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideApiRemoteDataSource(apiService: MarIvramApi) = HymenApiImpl(apiService)
+    fun provideApiRemoteDataSource(apiService: MarIvramApi) = HymnApiImpl(apiService)
 
 
     @Singleton
     @Provides
     fun provideGetAllHymensRepository(
-        apiServiceImpl: HymenApiImpl, databaseHelper: DatabaseHelper
+        apiServiceImpl: HymnApiImpl, databaseHelper: DatabaseHelper
     ) = AllHymensRepository(apiServiceImpl, databaseHelper)
 
 
     @Singleton
     @Provides
     fun provideAddTarnimaRepository(
-        apiServiceImpl: HymenApiImpl
+        apiServiceImpl: HymnApiImpl
     ) = AddTarnimaRepository(apiServiceImpl)
 
     @Singleton
     @Provides
     fun provideAddServantRepository(
-        apiServiceImpl: HymenApiImpl
+        apiServiceImpl: HymnApiImpl
     ) = AddServantRepository(apiServiceImpl)
 
     @Singleton

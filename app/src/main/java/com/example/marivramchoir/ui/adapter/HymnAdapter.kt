@@ -8,14 +8,14 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marivramchoir.R
-import com.example.marivramchoir.data.model.Hymen
-import com.example.marivramchoir.ui.listener.OnHymenClickListener
+import com.example.marivramchoir.data.model.Hymn
+import com.example.marivramchoir.ui.listener.OnHymnClickListener
 import kotlinx.android.synthetic.main.hymen_row.view.*
 
-class HymenAdapter constructor(private val context: Context,
-                               private val hymens:List<Hymen>,
-                               private val onHymenClickListener: OnHymenClickListener) :
-    RecyclerView.Adapter<HymenAdapter.MyViewHolder>() {
+class HymnAdapter constructor(private val context: Context,
+                              private val hymns:List<Hymn>,
+                              private val onHymnClickListener: OnHymnClickListener) :
+    RecyclerView.Adapter<HymnAdapter.MyViewHolder>() {
 
     private lateinit var fade:Animation
 
@@ -28,14 +28,14 @@ class HymenAdapter constructor(private val context: Context,
         fade = AnimationUtils.loadAnimation(context, R.anim.scale_anim)
         holder.card.animation = fade
         holder.checkHymen.visibility = View.GONE
-        holder.hymenName.text = hymens[position].hymenName
+        holder.hymenName.text = hymns[position].hymenName
         holder.itemView.setOnClickListener {
-            onHymenClickListener.onHymenClicked(hymens[position])
+            onHymnClickListener.onHymenClicked(hymns[position])
         }
     }
 
     override fun getItemCount(): Int {
-        return hymens.size
+        return hymns.size
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

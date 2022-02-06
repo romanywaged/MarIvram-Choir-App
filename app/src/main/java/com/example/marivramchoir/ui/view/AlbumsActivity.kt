@@ -40,7 +40,7 @@ class AlbumsActivity : AppCompatActivity() {
 
     private fun navigateActivity(type:String)
     {
-        intent = Intent(this, AllHymensInAlbumActivity::class.java)
+        intent = Intent(this, AllHymnsInAlbumActivity::class.java)
         intent.putExtra("Album_Type", type)
         startActivity(intent)
     }
