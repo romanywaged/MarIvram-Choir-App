@@ -51,7 +51,7 @@ class SplashActivity : AppCompatActivity() {
           }
 
           else{
-              navigateActivity(DashboardActivity::class.java)
+              navigateActivity(LoginActivity::class.java)
            }
         }, splashTime.toLong())
 

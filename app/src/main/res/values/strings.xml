@@ -41,6 +41,13 @@
     <string name="marivram_desc">كورال مارافرام السريانى هو كورال يتكون من جميع مراحل الكورالات ابتدائى - اعدادى - ثانوى - جامعه - خريجين و البرنامج هيساعدك تشوف وتعرف جميع ترانيم الكورال </string>
     <string name="read_add_desc">البرنامج بيسمحلك تشوف وتقرا الترانيم وتسمعها و تضيف ترانيم و تضيف خدمه معينه بأضافة الترانيم المختاره للخدمه </string>
     <string name="next">Next</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="login_title_desc">We missed you ! Login to get Started</string>
+    <string name="password">password</string>
+    <string name="guest">Login as guest</string>
+    <string name="help">Need Help?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="not_have_account">Don\'t have an account?</string>
 
     <string-array name="Albumes">
         <item>سمو الملك</item>

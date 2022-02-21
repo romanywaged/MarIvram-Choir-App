@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/btn_bg.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/dashboard_bg.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/edit_text_bg.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/ic_password.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/ic_person.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/drawable/second_bg_dashboard.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout-v23/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_add_hymens_in_srvant.xml" value="0.17447916666666666" />
@@ -15,7 +19,9 @@
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_all_servant.xml" value="0.11770833333333333" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_app_toturial.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_create_servant.xml" value="0.209375" />
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_dashboard.xml" value="0.15" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_hymen_word.xml" value="0.14739583333333334" />
+        <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_show_tarnima.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/Romany/AndroidStudioProjects/MarIvramChoir/app/src/main/res/layout/activity_splash.xml" value="0.13697916666666668" />
